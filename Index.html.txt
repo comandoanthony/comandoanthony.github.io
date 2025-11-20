@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comando Anthony - Publicidad Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Comando Anthony</h1>
+        <p class="sub">Servicios Publicitarios Oficiales</p>
+    </header>
+
+    <section class="services">
+        <h2>Servicios Publicitarios</h2>
+        <ul>
+            <li>1 historia: <strong>USD $170</strong></li>
+            <li>1 video + 2 historias: <strong>USD $1000</strong></li>
+            <li>2 videos + 4 historias: <strong>USD $1750</strong></li>
+        </ul>
+
+        <h2>Paquetes a Largo Plazo</h2>
+        <ul>
+            <li>
+                <strong>3 meses – USD $2600</strong><br>
+                3 videos + 6 historias
+            </li>
+            <li>
+                <strong>6 meses – USD $5200</strong><br>
+                6 videos + 18 historias
+            </li>
+            <li>
+                <strong>12 meses – USD $8400</strong><br>
+                12 videos + 36 historias
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <p>Email: <strong>comandoanthonybusiness@gmail.com</strong></p>
+        <p>Cell / WhatsApp: <strong>+1 849 523 1725</strong></p>
+    </section>
+
+    <section class="social">
+        <h2>Redes Sociales</h2>
+        <a href="https://www.facebook.com/share/1C3e2YyTMX/?mibextid=wwXIfr">Facebook</a>
+        <a href="https://www.instagram.com/comandoanthony?igsh=MXhsaWVqNHp1dXc2NA%3D%3D&utm_source=qr">Instagram</a>
+        <a href="https://www.tiktok.com/@comandoanthony?_r=1&_t=ZS-91Z3FeO5K4q">TikTok</a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
