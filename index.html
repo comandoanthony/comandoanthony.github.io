@@ -3,53 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comando Anthony - Publicidad Oficial</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Servicios de Publicidad en Redes Sociales | ComandoAnthony</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define la fuente Inter y el estilo del cuerpo */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117; 
+        }
+
+        /* Clase para el contenedor de la imagen de fondo */
+        .background-container {
+            /* *** PASO 1: EDITA ESTA URL (Añade tu propia foto) *** */
+            background-image: url('https://placehold.co/1920x1080/000000/ffffff?text=Tu+Foto+Profesional+Aqui');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            position: relative;
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Overlay semi-transparente para que el texto resalte */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); 
+        }
+
+        /* Configuración de color para Tailwind */
+        :root {
+            --color-primary: #facc15;
+            --color-secondary: #1f2937;
+        }
+
+        /* Estilo específico para las tarjetas de testimonio */
+        .testimonial-card {
+            scroll-snap-align: start;
+            flex: 0 0 100%; /* Ocupa el 100% en móvil */
+        }
+        @media (min-width: 768px) {
+             .testimonial-card {
+                flex: 0 0 calc(33.333% - 1.33rem); /* 3 tarjetas con espacio en escritorio */
+            }
+        }
+        
+        /* Estilo para el contenedor de desplazamiento horizontal (carrusel) */
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+            gap: 2rem;
+        }
+        .testimonial-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        .testimonial-carousel::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+    </style>
+    <!-- Configuración de color para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#facc15', /* Amarillo brillante (yellow-400) */
+                        'secondary': '#1f2937', /* Gris oscuro */
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Comando Anthony</h1>
-        <p class="sub">Servicios Publicitarios Oficiales</p>
-    </header>
 
-    <section class="services">
-        <h2>Servicios Publicitarios</h2>
-        <ul>
-            <li>1 historia: <strong>USD $170</strong></li>
-            <li>1 video + 2 historias: <strong>USD $1000</strong></li>
-            <li>2 videos + 4 historias: <strong>USD $1750</strong></li>
-        </ul>
+    <div class="background-container">
+        <div class="overlay"></div>
 
-        <h2>Paquetes a Largo Plazo</h2>
-        <ul>
-            <li>
-                <strong>3 meses – USD $2600</strong><br>
-                3 videos + 6 historias
-            </li>
-            <li>
-                <strong>6 meses – USD $5200</strong><br>
-                6 videos + 18 historias
-            </li>
-            <li>
-                <strong>12 meses – USD $8400</strong><br>
-                12 videos + 36 historias
-            </li>
-        </ul>
-    </section>
+        <!-- Contenido principal centrado y con max-width para legibilidad -->
+        <div class="relative z-10 p-4 md:p-10 w-full max-w-7xl mx-auto">
 
-    <section class="contact">
-        <h2>Contacto</h2>
-        <p>Email: <strong>comandoanthonybusiness@gmail.com</strong></p>
-        <p>Cell / WhatsApp: <strong>+1 849 523 1725</strong></p>
-    </section>
+            <!-- Encabezado y Propuesta de Valor -->
+            <header class="text-center mb-16 bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border-b-4 border-primary">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight">
+                    <span class="text-primary">ComandoAnthony</span><br class="block md:hidden"/> | Publicidad con Impacto
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mt-6">
+                    Soy un <strong class="text-primary">creador de contenido influyente</strong> especializado en [Nicho/Intereses]. Mis servicios combinados en **Instagram y TikTok** garantizan la máxima exposición y conversión para tu producto.
+                </p>
+            </header>
 
-    <section class="social">
-        <h2>Redes Sociales</h2>
-        <a href="https://www.facebook.com/share/1C3e2YyTMX/?mibextid=wwXIfr">Facebook</a>
-        <a href="https://www.instagram.com/comandoanthony?igsh=MXhsaWVqNHp1dXc2NA%3D%3D&utm_source=qr">Instagram</a>
-        <a href="https://www.tiktok.com/@comandoanthony?_r=1&_t=ZS-91Z3FeO5K4q">TikTok</a>
-    </section>
+            <!-- SECCIÓN 1: ESTADÍSTICAS CLAVE Y PRUEBA SOCIAL -->
+            <section class="mb-16">
+                <h2 class="text-4xl font-bold text-center text-white mb-10">Resultados que Impulsan tu Marca</h2>
 
-    <script src="script.js"></script>
+                <!-- Bloque de Métricas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12">
+                    
+                    <!-- Métrica 1: Seguidores (ACTUALIZADO: 2.5M+) -->
+                    <div class="bg-secondary/70 p-4 rounded-xl shadow-lg border-b-4 border-primary">
+                        <p class="text-4xl font-extrabold text-white">2.5M+</p>
+                        <p class="text-sm text-gray-400 mt-1">Seguidores Combinados</p>
+                    </div>
+
+                    <!-- Métrica 2: Alcance Total (ACTUALIZADO: 50M) -->
+                    <div class="bg-secondary/70 p-4 rounded-xl shadow-lg border-b-4 border-primary">
+                        <p class="text-4xl font-extrabold text-white">50M+</p>
+                        <p class="text-sm text-gray-400 mt-1">Cuentas Alcanzadas (30 Días)</p>
+                    </div>
+
+                    <!-- Métrica 3: Impresiones (ACTUALIZADO: 30M) -->
+                    <div class="bg-secondary/70 p-4 rounded-xl shadow-lg border-b-4 border-primary">
+                        <p class="text-4xl font-extrabold text-white">30M+</p>
+                        <p class="text-sm text-gray-400 mt-1">Impresiones Mensuales</p>
+                    </div>
+                    
+                    <!-- Métrica 4: Demografía (SIN CAMBIOS) -->
+                    <div class="bg-secondary/70 p-4 rounded-xl shadow-lg border-b-4 border-primary">
+                        <p class="text-4xl font-extrabold text-white">70%</p>
+                        <p class="text-sm text-gray-400 mt-1">Audiencia Clave (18-35 Años)</p>
+                    </div>
+                </div>
+
+                <!-- Carrusel de Testimonios (Arrastrable en móvil) -->
+                <h3 class="text-2xl font-semibold text-white mb-6">Testimonios de Clientes</h3>
+                <div class="testimonial-carousel">
+                    
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-2xl">
+                        <p class="text-gray-700 italic mb-4">"El paquete de 3 meses superó nuestras expectativas. La audiencia de ComandoAnthony es increíblemente fiel, lo que se tradujo en un aumento del 30% en las ventas directas."</p>
+                        <p class="font-bold text-gray-900">- Ana Gómez</p>
+                        <p class="text-sm text-gray-500">Jefa de Marketing, Marca de Ropa [EJEMPLO]</p>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-2xl">
+                        <p class="text-gray-700 italic mb-4">"Necesitábamos una inyección de viralidad y el servicio express de videos en TikTok fue la solución. Obtuvimos miles de reproducciones en menos de 48 horas."</p>
+                        <p class="font-bold text-gray-900">- Ricardo Sanz</p>
+                        <p class="text-sm text-gray-500">Fundador, Startup Tecnológica [EJEMPLO]</p>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-2xl">
+                        <p class="text-gray-700 italic mb-4">"El plan VIP Anual nos da tranquilidad. Sabemos que nuestra marca tiene presencia constante y relevante en dos de las plataformas más importantes. Un socio de confianza."</p>
+                        <p class="font-bold text-gray-900">- María Flores</p>
+                        <p class="text-sm text-gray-500">Gerente Comercial, Empresa de Servicios [EJEMPLO]</p>
+                    </div>
+
+                    <!-- Testimonio 4 (Placeholder) -->
+                    <div class="testimonial-card bg-white p-6 rounded-xl shadow-2xl">
+                        <p class="text-gray-700 italic mb-4">"¡Añade tu mejor testimonio aquí! La prueba social es clave. No olvides incluir la marca con la que trabajaste para darle credibilidad."</p>
+                        <p class="font-bold text-gray-900">- Nombre del Cliente</p>
+                        <p class="text-sm text-gray-500">Posición, Nombre de la Empresa</p>
+                    </div>
+
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-4">
+                    <span class="text-primary font-bold">Consejo:</span> En móvil, desliza para ver todos los testimonios.
+                </p>
+            </section>
+            
+            <!-- Título de Servicios -->
+            <h2 class="text-4xl font-bold text-center text-white mb-10">Tarifas y Paquetes de Publicidad</h2>
+
+            <!-- SECCIÓN 2: GRID DE PAQUETES (SIN CAMBIOS) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Tarjeta de Servicio: SERVICIOS EXPRESS (ONE-TIME) -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl transition duration-300 transform hover:scale-[1.03] hover:shadow-primary/70 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <h2 class="text-3xl font-bold text-gray-800">Servicios Express</h2>
+                    </div>
+                    <p class="text-gray-700 mb-6">Contenido rápido y efectivo para lanzamientos puntuales. Publicación única en ambas plataformas.</p>
+                    
+                    <ul class="space-y-4 text-gray-600 font-medium">
+                        <!-- Paquete 1 Historia -->
+                        <li class="border-b pb-2">
+                            <span class="block text-lg font-semibold text-gray-900">1 Historia</span>
+                            <span class="text-2xl font-extrabold text-primary">USD$170</span>
+                        </li>
+                        
+                        <!-- Paquete 1 Video + 2 Historias -->
+                        <li class="border-b pb-2">
+                            <span class="block text-lg font-semibold text-gray-900">1 Video + 2 Historias</span>
+                            <span class="text-2xl font-extrabold text-primary">USD$1000</span>
+                        </li>
+
+                        <!-- Paquete 2 Videos + 4 Historias -->
+                        <li class="pb-2">
+                            <span class="block text-lg font-semibold text-gray-900">2 Videos + 4 Historias</span>
+                            <span class="text-2xl font-extrabold text-primary">USD$1750</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contacto" class="block mt-6 text-center bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition">Solicitar Express</a>
+                </div>
+
+                <!-- Tarjeta de Servicio: PAQUETES A MEDIANO PLAZO -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl transition duration-300 transform hover:scale-[1.03] hover:shadow-primary/70 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11H8V8h8v3zm-8 4h8v-3H8v3zm11 7H5c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2zM7 4h10v2H7V4zm12 16H5V7h14v13z"/></svg>
+                        <h2 class="text-3xl font-bold text-gray-800">Mediano Plazo (3 y 6 meses)</h2>
+                    </div>
+                    <p class="text-gray-700 mb-6">Promoción sostenida para la construcción de marca y lanzamientos por temporada. Mayor ahorro por volumen.</p>
+                    
+                    <ul class="space-y-6 text-gray-600 font-medium">
+                        <!-- Paquete 3 Meses -->
+                        <li class="p-3 bg-gray-50 rounded-lg shadow-inner">
+                            <span class="block text-xl font-extrabold text-gray-900">Paquete 3 Meses</span>
+                            <p class="text-sm text-gray-700 italic mb-2">1 video + 2 historias por mes (Total: 3 videos, 6 historias).</p>
+                            <span class="text-3xl font-extrabold text-primary">USD$2600</span>
+                        </li>
+                        
+                        <!-- Paquete 6 Meses -->
+                        <li class="p-3 bg-gray-50 rounded-lg shadow-inner">
+                            <span class="block text-xl font-extrabold text-gray-900">Paquete 6 Meses</span>
+                            <p class="text-sm text-gray-700 italic mb-2">1 video + 3 historias por mes (Total: 6 videos, 18 historias).</p>
+                            <span class="text-3xl font-extrabold text-primary">USD$5200</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contacto" class="block mt-6 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition">Contratar Mediano Plazo</a>
+                </div>
+
+                <!-- Tarjeta de Servicio: SERVICIO VIP ANUAL -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl transition duration-300 transform hover:scale-[1.03] hover:shadow-primary/70 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+                        <h2 class="text-3xl font-bold text-primary">Servicio VIP Anual</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Máximo nivel de compromiso y el mejor precio. Cobertura constante y la integración más profunda con mi audiencia.</p>
+                    
+                    <ul class="space-y-6 text-gray-300 font-medium">
+                        <!-- Paquete Anual -->
+                        <li class="p-3 bg-gray-700 rounded-lg shadow-inner border border-primary/50">
+                            <span class="block text-xl font-extrabold text-white">Paquete 1 Año</span>
+                            <p class="text-sm text-gray-400 italic mb-2">1 video + 3 historias por mes (Total: 12 videos, 36 historias).</p>
+                            <span class="text-3xl font-extrabold text-primary">USD$8400</span>
+                        </li>
+                        
+                        <li class="text-sm text-gray-400 mt-4">
+                            <span class="text-white font-bold">BONUS VIP:</span> Menciones espontáneas y prioridad en la programación.
+                        </li>
+                        <li class="text-sm text-gray-400">
+                             <span class="text-white font-bold">PLATAFORMAS:</span> Instagram y TikTok.
+                        </li>
+                    </ul>
+
+                    <a href="#contacto" class="block mt-6 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition">¡Quiero el Plan Anual!</a>
+                </div>
+
+            </div>
+            
+            <!-- Llamada a la Acción (CTA) -->
+            <div id="contacto" class="text-center mt-16 p-6 bg-primary/90 rounded-xl shadow-2xl">
+                <p class="text-2xl font-bold text-gray-900 mb-4">Empecemos a planear tu estrategia.</p>
+                <!-- 
+                    *** PASO 2: EDITA ESTE ENLACE (Tu correo o link de contacto) ***
+                 -->
+                <a href="mailto:tu-correo-aqui@ejemplo.com" class="inline-block px-12 py-4 bg-gray-900 text-primary text-xl font-extrabold rounded-full shadow-lg transition duration-300 hover:bg-gray-800 hover:text-white transform hover:scale-105">
+                    Contáctame Hoy Mismo
+                </a>
+                <p class="mt-4 text-sm text-gray-800">
+                    Respuesta garantizada en 24 horas.
+                </p>
+            </div>
+
+            <!-- Footer con enlaces a tus redes -->
+            <footer class="text-center mt-16 text-gray-500 text-sm">
+                &copy; 2025 ComandoAnthony. Desarrollado con ❤️ y GitHub Pages.
+                <div class="mt-2 space-x-4">
+                    <!-- Recuerda actualizar estos enlaces con tus URLs reales de Instagram y TikTok -->
+                    <a href="https://instagram.com/tu_usuario_ig" target="_blank" class="text-primary hover:text-white transition">Instagram</a>
+                    <a href="https://tiktok.com/@tu_usuario_tt" target="_blank" class="text-primary hover:text-white transition">TikTok</a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
 </body>
 </html>
+
