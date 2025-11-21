@@ -1,6 +1,4 @@
-
-          
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -72,7 +70,21 @@
             background: var(--color-primary);
             border-radius: 4px;
         }
+
+        /* Clases auxiliares */
+        .cursor-pointer {
+            cursor: pointer;
+        }
     </style>
+
+    <script>
+        // Función para alternar la visibilidad de las opciones de contacto
+        function toggleContactOptions(id) {
+            const options = document.getElementById(id);
+            // Toggle de la clase 'hidden' de Tailwind
+            options.classList.toggle('hidden');
+        }
+    </script>
     <script>
         tailwind.config = {
             theme: {
@@ -190,11 +202,13 @@
                         </li>
                     </ul>
 
-                    <div class="flex justify-center space-x-2 mt-6">
-                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition text-sm">
+                    <a onclick="toggleContactOptions('express-options')" class="block mt-6 text-center bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition cursor-pointer">Solicitar Express</a>
+                    
+                    <div id="express-options" class="hidden flex justify-center space-x-2 mt-2">
+                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-600 text-white py-2 rounded-lg font-bold hover:bg-gray-700 transition text-sm">
                             📧 Correo
                         </a>
-                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition text-sm">
+                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition text-sm">
                             📱 WhatsApp
                         </a>
                     </div>
@@ -221,11 +235,13 @@
                         </li>
                     </ul>
 
-                    <div class="flex justify-center space-x-2 mt-6">
-                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition text-sm">
+                    <a onclick="toggleContactOptions('medium-options')" class="block mt-6 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition cursor-pointer">Contratar Mediano Plazo</a>
+                    
+                    <div id="medium-options" class="hidden flex justify-center space-x-2 mt-2">
+                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-600 text-white py-2 rounded-lg font-bold hover:bg-gray-700 transition text-sm">
                             📧 Correo
                         </a>
-                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition text-sm">
+                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition text-sm">
                             📱 WhatsApp
                         </a>
                     </div>
@@ -253,11 +269,13 @@
                         </li>
                     </ul>
 
-                    <div class="flex justify-center space-x-2 mt-6">
-                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-900 text-white py-3 rounded-lg font-bold hover:bg-gray-800 transition text-sm">
+                    <a onclick="toggleContactOptions('vip-options')" class="block mt-6 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition cursor-pointer">¡Quiero el Plan Anual!</a>
+
+                    <div id="vip-options" class="hidden flex justify-center space-x-2 mt-2">
+                        <a href="mailto:comandoanthonybusiness@gmail.com" class="flex-1 text-center bg-gray-600 text-white py-2 rounded-lg font-bold hover:bg-gray-700 transition text-sm">
                             📧 Correo
                         </a>
-                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-primary text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-500 transition text-sm">
+                        <a href="https://wa.me/18495231725" target="_blank" class="flex-1 text-center bg-green-500 text-white py-2 rounded-lg font-bold hover:bg-green-600 transition text-sm">
                             📱 WhatsApp
                         </a>
                     </div>
